@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% block content %}
+    
+   
+    {% for fruit in fruit_list%}
+        {% if fruit not in hate%}
+            {% if fruit|length >= 2 %}
+                
+                {% if fruit|length > 3 %}
+                    <p>{{ fruit|slice:":2" }}...</p>
+                {% else %}
+                    <p>{{ fruit }}</p>
+                {% endif %}
+                
+            {% endif %}
+            
+        {% endif %}
+    {% endfor %}
+    
+    {% endblock content %} 
+</body>
+</html>

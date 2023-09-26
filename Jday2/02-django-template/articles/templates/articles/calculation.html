@@ -1,0 +1,12 @@
+{% extends "articles/base.html" %}
+
+{% block content %}
+    <h1>연산할 두 숫자를 입력하세요</h1>
+    <form action="/result/" method='GET'>
+      <label for="num1">첫번째 숫자:</label>
+      <input type="num" name='num1' id="num1">
+      <label for="num2">두번째 숫자:</label>
+      <input type="num" name='num2' id="num2">
+      <input type="submit" value='계산!'>
+    </form>
+{% endblock content %}
