@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>NEW</h1>
-    <form action="{% url 'articles:create'%}" method = "POST">
+    <form action="{% url 'articles:create'%}" method = "POST" enctype="multipart/form-data">
         {% comment %} Token {% endcomment %}
         {% csrf_token %}
         {% comment %} <div>
